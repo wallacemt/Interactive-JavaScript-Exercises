@@ -1,0 +1,31 @@
+body{
+    background: rgb(61, 114, 182);
+    font:  "Roboto Mono" 15pt monospace;
+}
+
+header{
+    color: wheat;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.479);
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+
+}
+#input{
+    text-align: center;
+}
+#res{
+    text-align: center;
+}

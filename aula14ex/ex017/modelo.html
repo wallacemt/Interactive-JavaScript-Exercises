@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada v1.0</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Titulo</h1>
+    </header>
+    <section>
+        <div>
+            <form Tabuada>
+                <label for="numero">Digite um número:</label>
+                <input type="number" name="numero"  id="numtabuada" min="1" required>
+                <button type="button" onclick="gerar()">Gerar Tabuada</button>
+
+            </form>
+        </div>
+        <div id="res">
+            <select name="tabuada" id="seltab"size = "10">
+                <option> Digite um Numero Acima </option>
+            </select>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; wallace_stm</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

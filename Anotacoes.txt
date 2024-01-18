@@ -1,0 +1,420 @@
+Prompt->  janela para inserir dados
+Number -> trasformar dados em numeros
+String -> trasforma dados em strings
+
+(number + number) -> adição
+(string + string) -> concatenação
+<----------------------------------------------------------------------------------------------------------------->
+# var x = "javascript"
+"Eu estou aprendendo s" 	// nao faz interpolação
+"Eu estou aprendendo" + s 	// Usando interpolação
+`Eu estou aprendendo ${s}` 	// Usando template string
+
+x.length 		// Quantas caractetres a string tem
+x.toUpperCase 	//Deixa tudo em 'MAIÚSCULO'
+x.toLowerCase 	//Deixa tudo em 'minúsculo'
+<----------------------------------------------------------------------------------------------------------------->
+# var n1 = 1545.5
+n1. toFixed(2) 
+n1.toLocaleString("pt-BR", {style: 'currency', currency: 'BRL'})
+<----------------------------------------------------------------------------------------------------------------->
+			>>>>>1°Operadores Aritimeticos<<<<<
++  = Soma
+-  = Subtração
+* = Multiplicação
+/ = Divisão
+%= Resto da Divisão
+** = Potencia
+= -> Atribuição
+****Ordem de Precedência****
+1= () -> "Parênteses "
+2=  ** -> "Potencia
+3= * / % -> "Multiplicação", "Divisão", "Resto da Divisão"
+4= + - => "Soma", "Subtração"
+**------------------------------------------------**
+Atribuição: 		|Auto atribuição:"Var n = 3"	|Simplificando:		|Incremento:
+Simples: 			|n = n+4			|n+= 4			|Var x =5		
+Exemplo:			|n = n-5			|n-= 5			|X=x+1 	x++(simplificado)   
+Var a = 5+3 : 8		|n = n*4			|n*= 4			|X=x-1 	 x-- (simplificado) 		 
+Var b = a% 5 : 3		|n = n/2			|n/= 2			|	
+Var c = 5* b ** 2 : 45		|n = n**2			|n**= 2			|
+Var d = 10 – a / 2 : 6		|n = n%5			|n%=5			|
+Var e = 6 * 2 / d : 2		|			|			|
+Var f = b % e + 4 / e : 3	|			|			|
+<----------------------------------------------------------------------------------------------------------------->
+			>>>>>2°Operadores Relacionais<<<<<
+> = Maior Que
+<= Menor Que
+>= Maior Ou igual
+<= Menor Ou igual
+== ->  Igual
+!= -> Diferente
+<----------------------------------------------------------------------------------------------------------------->
+			>>>3°Operadores Lógicos<<<
+1°   ! = Negação		
+2°  && = Conjunção "Uma coisa *É* outra"
+3°  || = Disjunção "Uma coisa *OU* outra"
+<----------------------------------------------------------------------------------------------------------------->
+			>>>Usando o DOM<<<
+OBS: O DOM serve para acessar  ou alterar elementos na pagina HTML direto no JavaScript.
+
+Document (Documento): Refere-se à página HTML carregada no navegador. O objeto document é a entrada principal para interagir com o DOM em JavaScript.
+
+Elemento: Cada parte do documento HTML é um elemento. Exemplos incluem <p>, <div>, <h1>, etc.
+
+Árvore de Elementos: Os elementos no DOM são organizados em uma estrutura de árvore hierárquica, onde o elemento <html> é o pai de <head>(cabeça) e <body>(corpo), que, por sua vez, são pais de outros elementos.
+
+Nó: Cada parte da árvore de elementos é um nó. Os elementos, atributos, texto e até mesmo comentários são tipos diferentes de nós no DOM.
+
+Atributo: As características dos elementos, como "id", "class", "src(source=fonte)", são chamadas de atributos. Você pode acessá-las e modificá-las através do DOM.
+
+Manipulação do DOM: JavaScript permite que você adicione, remova ou modifique elementos e atributos no DOM. Por exemplo, você pode adicionar um novo elemento, alterar o conteúdo de um parágrafo ou remover um botão.
+**------------------------------------------------**
+<<Cinco principais métodos de selecionar elementos DOM>>
+
+— var elemento = document.getElementById('meuId');
+
+— var elementos = document.getElementsByClassName('minhaClasse');
+
+—var paragrafos = document.getElementsByTagName('p');
+
+— var primeiroParagrafo = document.querySelector('p');
+
+— var todosParagrafos = document.querySelectorAll('p');
+<----------------------------------------------------------------------------------------------------------------->
+			>>>Eventos DOM<<<
+
+Eventos que podem ocorrer com o Mause em uma <DIV>
+
+— mauseenter(quando entra na area da div)		— mausemove(quando se move na area da div)
+— mausedawn(quando o clique e precionado na div	— mauseup(quando o clique e solto)
+— click(quando o mause clica em cima da div)		— mouseout(quando o mause sai sa area da div)
+
+<----------------------------------------------------------------------------------------------------------------->
+			>>>Condições(If)x(Else)<<<
+
+		*—Condições simples apenas um If—*
+\\Ex://
+var vel = 78.2
+console.log(`A velocidade do seu carro é ${vel}Km/h`)
+
+if(vel > 60) {
+	console.log("Você ultrapassou a velocidade permitida. Multado!")
+}
+
+console.log("Dirija sempre usando cinto de segurança")
+
+		*—Condições compostas tem If é Else—*
+\\Ex://
+var pais = "França"
+console.log(`Vivendo em ${pais}`)
+
+if(pais == "Brasil") {
+	console.log("Você é Brasileiro")
+}else{
+	console.log("Você é Estrangeiro!!")
+}
+
+		*— Condições Múltiplas utiliza o comando switch(expressão) 
+		com um break obrigatorio no final de cada caso— *
+\\EX://
+var agora = new Date()
+var diaSem = agora.getDay()
+
+/* 
+    0 = Domingo
+    1= Segunda
+    2= Terça
+    3= Quarta
+    4= Quinta
+    5= Sexta
+    6= Sabado
+*/
+
+//console.log(diaSem)
+switch(diaSem) {
+    case 0:
+        console.log("Domingo")
+        break
+    case 1:
+        console.log("Segunda")
+        break
+    case 2:
+        console.log("Terça")
+        break
+    case 3:
+        console.log("Quarta")
+        break
+    case 4:
+        console.log("Quinta")
+        break
+    case 5:
+        console.log("Sexta")
+        break
+    case 6:
+        console.log("Sabado")
+        break
+    default:
+        console.log("(Erro) Dia inválido")
+
+}
+<----------------------------------------------------------------------------------------------------------------->
+			>>>Estruturas de Repetição<<<
+
+		<<<WHILE>(Enquanto)"Estrutura de repetição com teste lógico no inicio" Faz uma condição enquanto for verdedeira.
+		Serve para repetir determinada linha de codigo, visando a praticidade e fazendo com que seja usada menos linhas de codigos.>>
+
+//Ex
+/*Sem While
+console.log("TUDO BOM?")
+console.log("TUDO BOM?")
+console.log("TUDO BOM?")
+console.log("TUDO BOM?")
+console.log("TUDO BOM?")
+console.log("TUDO BOM?")
+*/
+
+/*Com While
+var c = 1
+while(c <= 6){
+    console.log("TUDO BEM?")
+    c++
+}
+
+*/
+		<<<DO WHILE> (Faça Enquanto)"Estrutura de repetição com teste lógico no final" Faz a linha de codigo, depois verifica a condição sé e verdadeira. >>
+//Ex
+/*Usando DO
+var c = 1
+do{
+    console.log(`Passo ${c}`)
+    c++
+} while(c <= 6)
+*/
+		<<<FOR>(para)"Estrutura de repetição com variavel de controle" Dividida em 3 partes inicio, teste lógico, incremento.> 
+
+//Ex
+/*Usando FOR
+for(var c = 1;c<=50 ;c++ ){
+    console.log(c)
+}
+*/
+<----------------------------------------------------------------------------------------------------------------->
+			>>>Variáveis Compostas(array/vetor)<<<
+
+São variaveis  que armazenam mais de um conteúdo(O mesmo conceito de tuplas do python) Para escolher qual item deseja basta utilizar indice/chave conforme a variavel.
+
+//Ex
+let num = [5,8,2,9,3]
+console.log(`Nosso vetor é o ${num}`)
+
+//Ex
+let num = [5,8,2,9,3]
+console.log(`Primeiro indice do vetor é o ${num[0]}`)
+//***Os indices sempre começam pelo 0***
+
+//Ex Mostrando o vetor na tela.
+let valores = [8, 1, 7, 4, 2, 9]
+for(let pos = 0; pos < valores.length; pos++){
+    console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
+}
+Maneira Simplificada
+for(let pos in valores){
+    console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
+}
+
+//Ex Realizando Busca nos Vetores
+let num = [5,8,2,9,3]
+num.push(1)
+num.sort()  
+console.log(num)
+console.log(`O vetor tem ${num.length} posições`)
+
+let pos = num.indexOf(8)
+console.log(`O valor 8 ta na posição ${pos}`)
+<----------------------------------------------------------------------------------------------------------------->
+			>>>Funções<<<
+*São ações executadas assim que são chamadas ou em decorrência de algum evento.
+*Uma função pode receber parâmetros e retornar um resultado.
+//Ex
+function parimpar(n){
+    if(n%2==0){
+        return "Par"
+    }else{
+        return "Impar"
+    }
+}
+
+console.log(parimpar(4))
+----------------------------------
+function soma(n1=0, n2=0){
+    return n1 + n2
+}
+
+console.log(soma(7));
+----------------------------------
+function fatorial(n){
+    let fat = 1
+    for(let c = n; c > 1; c--){
+        fat *= c
+    }
+    return fat
+}
+
+console.log(fatorial(5))
+----------------------------------
+ //Recursividade
+ function fatorial(n){
+    if(n == 1){
+        return 1
+    } else {
+        return n * fatorial(n-1)
+    }
+ }
+ console.log(fatorial(5))
+
+<----------------------------------------------------------------------------------------------------------------->
+O que estudar?
+ Functions:
+Arrow Functions 
+Callbacks
+Funções Anônimas
+iife
+JavaScript Funcional
+-----
+Objetos (orientação a objetos)
+Modularização
+RegEx (Regular Expressions)
+JSON
+AJAX
+NodeJS
+____________________________
+
+  O que é um Object?
+OBJECTS são CONTAINERS de PROPRIEDADES e MÉTODOS.
+OBJECTS são VARIÁVEIS COMPOSTAS, assim como os ARRAYS.
+
+  Array syntax:
+let identificador = [valor, valor, valor]
+                                     0        1        2
+  Object syntax:
+let identificador = {nome:valor, nome:valor, nome:valor}
+
+  Diferenças:
+Para declarar um ARRAY usa-se COLCHETES [ ]
+Para declarar um OBJECT usa-se CHAVES { }
+________
+
+Nos ARRAYS, os ELEMENTOS (conjunção de: posição e valor) são ACESSADOS por seus ÍNDICES (0, 1, 2).
+
+Nos OBJECTS, as PROPRIEDADES (conjunção de: nome e valor) são ACESSADAS por suas KEYS (nome1, nome2, nome3).
+
+  Como fazer este ACESSO (rode este código):
+
+const pessoas = {nome1: "rodolfo", nome2: "rogerin"} 
+const idades = [20, 35]
+
+// Há 2 maneiras de acessar as PROPRIEDADES de um OBJETO.
+
+// 1) syntax: objectName.propertyName
+console.log(`O ${pessoas.nome1} tem 20 anos de idade e o ${pessoas.nome2} têm 35.`)
+// 2) syntax: objectName["propertyName"]
+console.log(`O ${pessoas["nome1"]} tem 20 anos de idade e o ${pessoas["nome2"]} têm 35.`)
+// acessando os ELEMENTOS de um ARRAY através de seus ÍNDICES:
+console.log(`O rodolfo tem ${idades[0]} anos de idade e o rogerin têm ${idades[1]}.`)
+
+/* pessoas  é um OBJETO;  
+nome1 e nome2  são as PROPRIEDADES do OBJETO  pessoas;
+"rodolfo" e "rogerin"  são os VALORES das PROPRIEDADES  nome1 e nome2  , respectivamente. */
+________
+
+Os OBJETOS podem também ter MÉTODOS.
+Um MÉTODO é uma FUNÇÃO que é ARMAZENADA como PROPRIEDADE de um OBJETO. Ou seja, MÉTODOS são AÇÕES que podem ser EXECUTADAS em OBJETOS.
+
+  Exemplo (rode este código):
+
+const person = {
+    fName: "Elon",
+    lName: "Musk",
+    fullName() {
+        return `${this.fName} ${this.lName}`
+    }
+}
+console.log(person.fullName())
+
+/*  this  é uma keyword que refere-se a um OBJETO. 
+Portanto,  this.fName  refere-se à propriedade  fName  DESTE (this) OBJETO (person). */
+________
+
+  O que é  this  ?
+
+this  é uma keyword que refere-se a um OBJETO.  this  NÃO É uma VARIÁVEL. Você NÃO PODE MUDAR o VALOR de  this  .
+Mas QUAL objeto  this  refere-se? Isto dependerá de COMO esta keyword foi utilizada ou chamada:
+
+Em um MÉTODO,  this  refere-se ao OBJETO (exemplo anterior).
+Sozinha,  this  refere-se ao OBJETO GLOBAL.
+Em uma FUNÇÃO,  this  refere-se ao OBJETO GLOBAL.
+Em uma FUNÇÃO, em modo estrito (*strict mode),  this  é undefined.
+Em um EVENTO,  this  refere-se ao ELEMENTO que RECEBEU o EVENTO.
+Métodos como  call(),  apply()  e  bind()  , podem referir  this  a QUALQUER OBJETO.
+
+  *O que é Strict Mode?
+
+O comando:  "use strict"  , indica que um código DEVE SER EXECUTADO em Strict Mode, modo estrito. Este pode ser utilizado no INÍCIO do SCRIPT, agindo GLOBALMENTE, ou DENTRO de uma FUNÇÃO ESPECÍFICA, agindo LOCALMENTE.
+Este modo serve para REVELAR MÁS PRÁTICAS de ESCRITA, SYNTAX, ao lançar NOVAS MENSAGENS de ERRO no CONSOLE do NAVEGADOR, que antes passariam desapercebidas. Portanto, este modo auxilia na escrita de um código mais "clean", previnindo que você atribua um valor à uma variável antes de declará-la, por exemplo (rode este código):
+ 
+// SEM UTILIZAR o Strict Mode:
+function serHumano() {
+    return nome = "rodolfo" // atribuindo um valor à uma variável SEM DECLARÁ-LA. 
+}
+console.log(serHumano()) // "rodolfo" foi exibido normalmente sem mensagens de erro.
+
+console.log('-------')
+
+// UTILIZANDO o Strict Mode:
+function pessoa() {
+    "use strict"  // caso APAGUE este "use strict", o código NÃO DARÁ ERRO, mesmo que este exista.
+    return sobrenome = "da Silva"  // atribuindo um valor à uma variável SEM DECLARÁ-LA. 
+}
+console.log(pessoa()) // ReferenceError: sobrenome is not defined
+
+// Para saber mais, Google: "JavaScript Use Strict"
+
+-HTML E CSS
+-Functions
+-elo function
+-callbacks
+-funções anônimas
+-IIFE
+-orientação a objetos
+-modularização
+-regEx(expressões regulares)
+-Json
+-AJAX
+-NodeJs
+-bibliotecas e frameworks(Jquery, vue,js, angular[...])
+______________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

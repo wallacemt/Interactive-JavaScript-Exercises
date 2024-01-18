@@ -1,0 +1,15 @@
+<<<<Curso de Logica by Gustavo Lima>>>>>
+--------------------------------------------------------------------------------------------------
+'> ' = maior que		console.log -> imprimir algo na tela(console)
+'>='  = maior igual 		function -> cria uma função, mas que precisa ser chamada para funcionar
+'<' = menor que		${} -> Concatenar valores dentro da string
+'<=' = menor igual
+---------------------------------------------------------------------------------------------------
+>>>>Condicionais<<<<
+
+if --> Condicional (Se);
+ex =  "se" fazer sol, irei para praia.
+
+else --> Condiciona (Se Não);
+ex= "se não" chover, irei para praia.
+
