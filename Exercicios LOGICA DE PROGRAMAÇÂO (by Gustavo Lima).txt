@@ -119,29 +119,34 @@ negouposi();
 *-----------------------------------------------------------------------------*
 Exercício: Fazer um programa que calcula Imc chamando uma função.
 
-#incompleto
-ffunction calcImc(nome, peso, altura){
-    let imc = peso/(altura*altura);
+//Resposta
+
+function calcImc(nome, peso, altura) {
+    let imc = peso / (altura * altura);
     console.log(`${nome} tem Imc de ${imc.toFixed(1)}`);
+    return imc; // Retorna o valor do IMC sem aplicar o toFixed()
+}
+
+function interpimc(imc) {
     if (imc < 18.5) {
-    console.log('ATENÇÃO! Você está ABAIXO do PESO normal!!');
+        return 'ATENÇÃO! Você está ABAIXO do PESO normal!!';
     } else if (18.5 <= imc && imc < 24.9) {
-        console.log("PARABÉNS! Está no peso IDEAL!");
+        return 'PARABÉNS! Está no peso IDEAL!';
     } else if (25 <= imc && imc < 29.9) {
-        console.log("ATENÇÃO! Você está com SOBREPESO!!");
+        return 'ATENÇÃO! Você está com SOBREPESO!!';
     } else if (30 <= imc && imc < 34.9) {
-        console.log("URGENTE! Você está com OBESIDADE grau 1!!! Procure um médico.");
-    }else if(35 <= imc && imc < 39.9){
-        console.log("URGENTE! Você está com OBESIDADE grau 2(Severa)!!! Procure um médico.");
-    }else {
-    console.log("URGENTE! Você está com OBESIDADE MÓRBIDA(Grave)!!! Procure um médico.");
+        return 'URGENTE! Você está com OBESIDADE grau 1!!! Procure um médico.';
+    } else if (35 <= imc && imc < 39.9) {
+        return 'URGENTE! Você está com OBESIDADE grau 2(Severa)!!! Procure um médico.';
+    } else {
+        return 'URGENTE! Você está com OBESIDADE MÓRBIDA(Grave)!!! Procure um médico.';
     }
 }
 
-console.log(">>Calculando IMC ⚖<<");
-let nom = prompt("Olá, qual seu Nome?: ");
-let alt = parseFloat(prompt("Qual sua Altura? (m): "));
-let pes = parseFloat(prompt("Qual seu Peso? (Kg): "));
-calcImc(nom, pes, alt);
-
-
+console.log('>> Calculando IMC ⚖ <<');
+let nome = prompt('Olá, qual seu Nome?: ');
+let altura = parseFloat(prompt('Qual sua Altura? (m): '));
+let peso = parseFloat(prompt('Qual seu Peso? (Kg): '));
+let resultadoimc = calcImc(nome, peso, altura);
+let interpretação = interpimc(resultadoimc);
+console.log(`Seu IMC é ${resultadoimc.toFixed(2)} e você está ${interpretação}`);
