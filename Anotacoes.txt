@@ -5,7 +5,7 @@ String -> trasforma dados em strings
 (number + number) -> adição
 (string + string) -> concatenação
 <----------------------------------------------------------------------------------------------------------------->
-# var x = "javascript"
+# var s = "javascript"
 "Eu estou aprendendo s" 	// nao faz interpolação
 "Eu estou aprendendo" + s 	// Usando interpolação
 `Eu estou aprendendo ${s}` 	// Usando template string
