@@ -74,9 +74,9 @@ h1{
 /* class que esconde */
 
 
-/* .hide{
+.hide{
     display: none !important;
-} */
+}
 
 
 /* placar */
@@ -120,5 +120,4 @@ h1{
     background-color: #000;
     color: #fff;
     padding: 20px;
-    display: none;
 }
