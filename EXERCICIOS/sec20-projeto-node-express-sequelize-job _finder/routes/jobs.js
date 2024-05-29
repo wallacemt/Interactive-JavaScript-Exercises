@@ -17,6 +17,7 @@ router.post('/add', (req, res) =>{
         description,
         salary,
         company,
+        email,
         new_job
     })
     .then(() => res.redirect('./'))
