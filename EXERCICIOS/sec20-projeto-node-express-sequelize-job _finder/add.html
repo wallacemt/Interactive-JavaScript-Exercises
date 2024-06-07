@@ -27,53 +27,41 @@
       </div>
     </nav>
   </header>
-  <div id="top-container" class="container-fluid">
-    <h1 id="main-title" class="text-center">Encontre o emprego dos seus sonhos</h1>
-    <p id="main-subtitle" class="text-center">Somos o site com mais vagas de tecnologia no mercado, direcionadas a home office</p>
-    <form id="search-form" class="form-inline" action="">
-      <div class="form-group col-md-10">
-        <input type="text" class="form-control" id="job" name="job" placeholder="Digite a vaga que está buscando">
+  <div id="add-form-container" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Divulgue a vaga preenchendo o formulário</h1>
       </div>
-      <div class="col-md-2">
-        <button type="submit" class="btn btn-primary">Procurar</button>
+      <div id="form-box" class="col-md-12">
+        <h2>Preencha os dados da melhor forma possível para encontrar mais rápido seu dev!</h2>
+        <form action="">
+          <div class="form-group">
+            <label for="title">Título da vaga:</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título da vaga" required>
+            <small id="titleHelp" class="form-text text-muted">O título é muito importante, seja claro e objetivo.</small>
+          </div>
+          <div class="form-group">
+            <label for="description">Descrição da vaga:</label>
+            <textarea type="text" class="form-control" id="description" name="description" placeholder="Descreva as atividades do desenvolvedor..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="company">Empresa contratante:</label>
+            <input type="text" class="form-control" id="company" name="company" placeholder="Digite a empresa que vai contratar" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail para contato:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Digite o e-mail para contato" required>
+          </div>
+          <div class="form-group">
+            <label for="salary">Salário oferecido:</label>
+            <input type="text" class="form-control" id="salary" name="salary" placeholder="Digite o Salário da vaga" required>
+          </div>
+          <input type="hidden" name="new_job" value="1">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
       </div>
-    </form>
-  </div>
-  <main>
-    <div id="jobs-container" class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 id="job-list-title">Veja as nossas vagas em destaque</h2>
-          <ul id="job-list" class="list-group">
-            <li class="list-group-item new-job">
-              <img src="public/img/company.svg" alt="Company">
-              <p>Empresa</p>
-              <h2>Titulo da vaga</h2>
-              <p>R$2000,00</p>
-              <span class="new-job-label">Nova</span>
-              <a class="btn btn-primary">Ver vaga</a>
-            </li>
-            <li class="list-group-item">
-              <img src="public/img/company.svg" alt="Company">
-              <p>Empresa</p>
-              <h2>Titulo da vaga</h2>
-              <p>R$2000,00</p>
-              <a class="btn btn-primary">Ver vaga</a>
-            </li>
-            <li class="list-group-item">
-              <img src="public/img/company.svg" alt="Company">
-              <p>Empresa</p>
-              <h2>Titulo da vaga</h2>
-              <p>R$2000,00</p>
-              <a class="btn btn-primary">Ver vaga</a>
-            </li>
-          </ul>
-        </div>
-        </div>
     </div>
-  </main>
-
-
+  </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
