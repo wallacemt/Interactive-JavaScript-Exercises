@@ -28,7 +28,8 @@ const questions = [
         "answer": "Banco de dados",
         "correct": false
       },
-    ]
+    ],
+    "img": "https://files.tecnoblog.net/wp-content/uploads/2021/01/o_que_e_php_unsplash.jpg"
   },
   {
     "question": "Uma forma de declarar variável em JavaScript:",
@@ -49,7 +50,8 @@ const questions = [
         "answer": "#let",
         "correct": false
       },
-    ]
+    ],
+    "img": "https://blog.cronapp.io/wp-content/uploads/2020/09/javascript-1.jpg"
   },
   {
     "question": "Qual o seletor de id no CSS?",
@@ -70,7 +72,52 @@ const questions = [
         "answer": "/",
         "correct": false
       },
-    ]
+    ],
+    "img": "https://www.showmetech.com.br/wp-content/uploads//2020/10/dicas-de-CSS-e1620852882761-1920x1024.jpg"
+  },
+  {
+    "question": "O que significa a sigla 'HTML'? ",
+    "answers": [
+      {
+        "answer": "HyperText Markdown Language",
+        "correct": false
+      },
+      {
+        "answer": "HyperText Markup Language",
+        "correct": true
+      },
+      {
+        "answer": "HighText Markup Language",
+        "correct": false
+      },
+      {
+        "answer": " HyperTool Multi Language",
+        "correct": false
+      },
+    ],
+    "img": "https://neilpatel.com/wp-content/uploads/2017/12/codigos-html-para-paginas-web.jpeg"
+  },
+  {
+    "question": "Qual desses não é um tipo de loop em Python'? ",
+    "answers": [
+      {
+        "answer": "for",
+        "correct": false
+      },
+      {
+        "answer": "while",
+        "correct": false
+      },
+      {
+        "answer": "foreach",
+        "correct": true
+      },
+      {
+        "answer": "do-while",
+        "correct": false
+      },
+    ],
+    "img": "https://ltecnologia.com.br/blog/wp-content/uploads/2021/09/30_01_20-Python-uma-linguagem-de-programacao-para-favorecer-a-legibilidade-do-codigo.jpg"
   },
 ]
 
@@ -89,6 +136,10 @@ function createQuestion(i) {
     btn.remove();
   });
 
+  //adiciona a imagem
+  let questionImg = document.getElementById("question-img");
+  questionImg.style.backgroundImage ='url(' + questions[i].img + ')';
+
   // Altera texto da pergunta
   const questionText = question.querySelector("#question-text");
   const questionNumber = question.querySelector("#question-number");
@@ -99,6 +150,7 @@ function createQuestion(i) {
   // Insere alternativas
   questions[i].answers.forEach(function(answer, i) {
     
+
     // Altera texto do template
     const answerTemplate = document.querySelector(".answer-template").cloneNode(true);
 
@@ -177,16 +229,16 @@ function nextQuestion(){
 function showSucessMessage() {
   hideeOrShowQuizz();
   
+  
   //trocar dados da tela de sucesso
-
   //calcular o score
   const score = ((points / questions.length) * 100).toFixed(2);
-
+  
   const displayScore = document.querySelector("#display-score span");
-
-
+  
+  
   displayScore.textContent = score.toString();
-
+  
   //alterar o número de perguntas corretas
   const correctAnswers = document.querySelector("#correct-answers");
   correctAnswers.textContent = points;
@@ -194,7 +246,19 @@ function showSucessMessage() {
   //alterar o total de perguntas
   const questionqty = document.querySelector("#questions-qty");
   questionqty.textContent = questions.length;
-
+  
+  //mostra img de vitoria
+  let scoreImg = document.getElementById("img-score");
+  let msgResultado = document.getElementById("result")
+  if(score > 90){
+    scoreImg.style.backgroundImage = 'url(../img/boa.gif)';
+  }else if(score >= 50 && score <= 90){
+    scoreImg.style.backgroundImage = 'url(../img/medio.gif)';
+    msgResultado.innerText = "Podia ter sido melhor..."
+  }else{
+    scoreImg.style.backgroundImage = 'url(../img/ruim.gif)';
+    msgResultado.innerText = "Decepcionante..."
+  }
 }
 
 //mostrar ou esconder o score
