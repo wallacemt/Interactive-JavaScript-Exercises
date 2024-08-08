@@ -35,11 +35,11 @@ O curso cobre os seguintes tópicos:
 
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/seu_usuario/Curso-JS.git
+   git clone https://github.com/wallacemt/Interactive-JavaScript-Exercises.git
    ```
 2. Navegue para a pasta da aula desejada:
    ```sh
-   cd Curso-JS/aula01
+   cd Interactive-JavaScript-Exercises/aula01
    ```
 3. Abra o arquivo `index.html` no seu navegador para ver os exemplos em ação.
 
